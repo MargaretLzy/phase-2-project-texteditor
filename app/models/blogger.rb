@@ -7,6 +7,7 @@ class Blogger < ApplicationRecord
     validates :bio, length: {minimum: 30}
 
     def featured_post
-        self.posts.max_by{|post| post.likes}
-    end 
+        post = self.posts.max_by { |post| post.likes }
+   end
+
     end

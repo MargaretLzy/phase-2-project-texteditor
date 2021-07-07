@@ -1,0 +1,10 @@
+<h1> Destination Show</h1>
+
+Most Recent Posts:
+
+<% @destination.most_recent.each do |post| %>
+    <p> <%= post.title %>  </p>
+<% end %>
+
+<br>
+<%= link_to 'Featured Post', post_path(@destination.featured_post) %>
