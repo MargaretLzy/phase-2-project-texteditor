@@ -4,3 +4,9 @@
 <% @blogger.posts.each do |post| %>
     <li> <%= post.title %> | Likes: <%=post.likes%> </li>
 <%end%>
+
+<br>
+
+<% if @blogger.featured_post %>
+<p> <%= link_to 'Featured Post', post_path(@blogger.featured_post) %> </p>
+<% end %>

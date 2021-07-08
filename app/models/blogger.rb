@@ -10,4 +10,8 @@ class Blogger < ApplicationRecord
         post = self.posts.max_by { |post| post.likes }
    end
 
+   def top_5
+    des = self.destination.featured_post
+   end
+   
     end

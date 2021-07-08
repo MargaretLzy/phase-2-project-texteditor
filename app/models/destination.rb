@@ -12,7 +12,7 @@ class Destination < ApplicationRecord
 
    def average_age
     sum = self.bloggers.sum {|blogger| blogger.age}
-    sum/ self.bloggers.count
+    self.bloggers.map {|blogger|sum/bloggers.count}
    end
 
 

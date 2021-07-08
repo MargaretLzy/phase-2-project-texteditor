@@ -1,10 +1,17 @@
 <h1> Destination Show</h1>
 
+Average age:
+<%= @destination.average_age %>
+<br>
 Most Recent Posts:
 
 <% @destination.most_recent.each do |post| %>
-    <p> <%= post.title %>  </p>
+    <p> <%= post.title %> </p>
 <% end %>
 
+
+
 <br>
+<% if @destination.featured_post %>
 <%= link_to 'Featured Post', post_path(@destination.featured_post) %>
+<% end %>
